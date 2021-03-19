@@ -35,6 +35,17 @@ namespace Estoque
                 }
                 func1.Close();
             }
+            else if (func == 2)
+            {
+                StreamReader func2;
+                func2 = File.OpenText(CaminhoArquivo);
+                string[] linhas = File.ReadAllLines(CaminhoArquivo);
+                foreach (string linha in linhas)
+                {
+                    Console.WriteLine(linha);
+                }
+                func2.Close();
+            }
         }
     }
 }
